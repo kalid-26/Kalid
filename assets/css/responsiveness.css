@@ -661,26 +661,7 @@
 
 /* Extra large devices (large desktops) */
 @media (min-width: 1200px) {
-   /* body{
-    overflow: auto;
-   } */
-    .main-page{
-
-        header{
-            .hero-section{             
-
-                .hero-txt{
-
-                    h1{
-                        font-size: 12rem;
-                    }
-
-                }
-            }
-        }
-    }
-
-
+  
 }
 
 /* Ultra-wide devices (4K monitors) */

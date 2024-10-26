@@ -36,7 +36,7 @@ body{
     background-color: var(--mainBG);
     color: var(--textWhite);
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* cursor: none; */
 }
 
@@ -125,32 +125,24 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 30px auto;
-            height: 80vh;
+            margin: 20px auto;
+            height: 100vh;
     
             .hero-txt{
                 display: flex;
                 flex-direction: column;
     
                 h1{
-                    font-size: 14rem;
+                    font-size: 5rem;
                     font-weight: 900;
                 }
 
                 p{
-                    animation: rotated 6s ease-in-out infinite alternate-reverse;
+                    
                     font-size: 0.7rem;
                 }
             }
             
-
-            .hero-txt p:nth-child(1){
-                text-align: end;      
-            }
-
-            .hero-txt p:nth-child(3){
-                text-align: start;
-            }
         }
     
         .navigation-links{
@@ -278,23 +270,6 @@ body{
         
     }
     
-    .section{
-        width: 100%;
-        height: auto;
-        padding: 50px 50px;
-        background-color: var(--mainBG);
-        position: absolute;
-        top: -300%;
-        opacity: 0;
-        z-index: 1;
-      
-    }
-
-    .section.active{
-        top: 0;
-        opacity: 1;
-        z-index: 1000;
-    }
 
     .about{
         display: flex;
@@ -663,9 +638,6 @@ body{
         }
 
         .title{
-            position: absolute;
-            top: 50%;
-            left: 50%;
             h1{
                 font-size: 6rem;
                 font-weight: 700;

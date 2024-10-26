@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalid Mohammed</title>
+
     <link rel="shortcut icon" href="assets/favi.png" type="image/x-icon">
 
+    <link rel="stylesheet" href="./node_modules/locomotive-scroll/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="assets/icons/remixicon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsiveness.css">
+
 </head>
 <body>
     
     <!-- web preloader -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <h1>WELCOME</h1>
         <div class="timer">
             <h5><span>00</span> - 100</h5>
         </div>
-    </div>
+    </div> -->
     <!-- end of preloader  -->
 
     <!-- cursor  -->
@@ -32,16 +36,18 @@
             
             <!-- logo and menubar -->
             <section class="navs">
-                <a href="index.html"><h1>K</h1></a>
+                <a href="index.html"><h1>KALID</h1></a>
                 <i class="ri-menu-3-line" id="menuIcon"></i>
             </section>
 
             <!-- hero title  -->
             <section class="hero-section">
                 <div class="hero-txt">
-                    <p>Full Stack</p>
-                    <h1>KALID</h1>
-                    <p>Modern Web Designer and Developer</p>
+                    <p>KALID</p>
+                    <p>MODERN</p>
+                    <h1>WEB DESIGNR and</h1>
+                    <h1>DEVELOPER</h1>
+                    <!-- <p>Modern Web Designer and Developer</p> -->
                 </div>
             </section>
 
@@ -86,10 +92,11 @@
         <!--end of heaeder hero section  -->
 
         <!-- starting of about section  -->
-        <section class="about section" id="about">
+        <section class="about section" data-scroll data-scroll-speed="1" id="about">
             <article class="about-img">
-                <img src="assets/imgs/k1.jpg" alt="mySmallPhoto">
-            </article>           
+                <img src="assets/imgs/k1.jpg" data-scroll data-scroll-speed="3" alt="mySmallPhoto">
+            </article>
+
             <article class="about-txt">
                 <h5>Developer / Designer</h5>
 
@@ -117,26 +124,16 @@
 
                     <a href="#" class="touch">Get in touch</a>
                 </div>
-
-                <div class="about-close">
-                    <i class="ri-close-large-line" id="about-close"></i>
-                </div>
             </article>           
         </section>
         <!-- end of about section  -->
 
         <!-- starting projects about section  -->
         <section class="projects section" id="projects">
-            <article class="top">
-                <div class="title">
-                    <h1>PROJECT</h1>
-                    <small>2 full Stack and 3 front end</small> 
-                    <a href="#">Visit All Projects</a>
-                </div>
-              
-                <div class="project-close">
-                    <i class="ri-close-large-line" id="project-close"></i>
-                </div>
+            <article class="top">  
+                <h1>PROJECT</h1>
+                <small>2 full Stack and 3 front end</small> 
+                <a href="#">Visit All Projects</a>
             </article>
 
             <article class="bottom">
@@ -175,14 +172,9 @@
 
         <!-- starting of services section  -->
         <section class="services section" id="services">
-            <article class="top">
-                <div class="title">
-                    <h1>SERVICES</h1>
-                    <small>what you will get from me?</small>
-                </div>
-                <div class="service-close">
-                    <i class="ri-close-large-line" id="service-close"></i>
-                </div>
+            <article class="top">               
+                <h1>SERVICES</h1>
+                <small>what you will get from me?</small>               
             </article>
 
             <article class="bottom">
@@ -223,13 +215,8 @@
         <!-- starting of contact section  -->
         <section class="contact section" id="contact">
              <article class="top">
-                <div class="title">
-                    <h1>CONTACT</h1>
-                    <small>message me!</small>
-                </div>
-                <div class="contact-close">
-                    <i class="ri-close-large-line" id="contact-close"></i>
-                </div>
+                <h1>CONTACT</h1>
+                <small>message me!</small>
             </article>
 
             <article class="bottom">
@@ -268,13 +255,7 @@
         <!-- end of contact section  -->
 
         <!-- starting of funfact section  -->
-        <section class="funfact section" id="funfact">
-            <article class="top">
-                <div class="funfact-close">
-                    <i class="ri-close-large-line" id="funfact-close"></i>
-                </div>
-            </article> 
-
+        <section class="funfact section" data-scroll data-scroll-speed="6" id="funfact">
             <article>
                 <div class="title">
                     <small>fun fact about me!</small>
@@ -287,6 +268,7 @@
 
     </main>
 
+    <script src="./node_modules/locomotive-scroll/dist/locomotive-scroll.js"></script>
     <script src="assets/gsap/gsap/dist/gsap.js"></script>
     <script src="assets/gsap/gsap/dist/ScrollTrigger.js"></script>
     <script src="assets/js/script.js"></script>
