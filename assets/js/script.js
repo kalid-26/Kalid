@@ -1,14 +1,33 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('.main-page'),
-    smooth: true
+// Smoth Scroll using Locomotive and gsap ScrollTrigger
+
+gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".main-page"),
+  smooth: true
 });
 
+locoScroll.on("scroll", ScrollTrigger.update);
 
 
+ScrollTrigger.scrollerProxy(".main-page", {
+  scrollTop(value) {
+    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+  }, 
 
+  getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  },
+  
+  pinType: document.querySelector(".main-page").style.transform ? "transform" : "fixed"
+});
 
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
 
+// end of smooth scroll 
 
+//////////////////////////////////////////////////////////////////////////
 
 // cursor animation 
 const cursor = document.getElementsByClassName("cursor");
@@ -31,6 +50,7 @@ document.addEventListener("mouseleave", ()=> {
 
 // end of cursor animation 
 
+// menu toggler 
 function menuToggler(){
  
     const menuIcon = document.getElementById("menuIcon");
@@ -91,7 +111,10 @@ function menuToggler(){
     });
 };
 
-menuToggler();
+// menuToggler();
+// end of menu toggler 
+
+
 
 // hero section  and loader animation
 function heroAnim(){
@@ -181,7 +204,7 @@ function heroAnim(){
 
 };
 
-heroAnim();
+// heroAnim();
 
 // about section animation
 // function aboutAnim(){
@@ -191,26 +214,62 @@ heroAnim();
 // aboutAnim();
 
 // project section animation 
-// function projectAnim(){
-//     const projectClose = document.getElementById("project-close");
+function projectAnim(){
+    const projectSection = document.querySelector(".projects");
 
-//     projectClose.addEventListener("click", ()=> {
-//         gsap.to(".projects", {
-//             top: "-120%",
-//             duration: 2,
-            
-//         });
-//     });
-// };
+   gsap.from(projectSection, {
+        duration: 0.8,
+        // backgroundColor: "#5A34A4",
+        y: -100,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".projects .title h1",
+            scroller: ".main-page",
+            marker: true,
+            scrub: 20,
+            start: "top 30%",
+            end: "end 5%",
+            pin: true,
+        }
+   });
+};
 
 // projectAnim();
 
 // service section animation
-// function serviceAnim(){
-   
-// };
+function serviceAnim(){
+    
+    document.querySelectorAll(".service").forEach((elem)=> {
 
-// serviceAnim();
+        let rotate = 0;
+        let diffrot = 0;
+
+        elem.addEventListener("mousemove", (dets)=>{
+            let diff = dets.clientY - elem.getBoundingClientRect().top;
+
+            diffrot = dets.clientX - rotate;
+            rotate = dets.clientX;
+
+            gsap.to(elem.querySelector("img"), {
+                opacity: 1,
+                ease: "power3",
+                top: dets.diff,
+                left: dets.clientX,
+                rotate: gsap.utils.clamp(-20, 20, diffrot * 1)
+            });
+        })
+
+        elem.addEventListener("mouseleave", (dets)=> {
+            gsap.to(elem.querySelector("img"), {
+                opacity: 0,
+            });
+        })
+    });
+    
+
+};
+
+serviceAnim();
 
 // contact section animation
 // function contactAnim(){

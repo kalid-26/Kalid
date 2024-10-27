@@ -32,11 +32,11 @@
 
             .hero-section{   
                 margin: 0;          
-                
+                height: 70vh;
                 .hero-txt{
 
                     h1{
-                        font-size: 8rem;
+                        font-size: 2.5rem;
                     }
 
                 }
@@ -60,9 +60,9 @@
 
         .about{
             flex-direction: column;
+
             .about-txt{
                 padding-top: 20px;
-                width: 110%;
                 position: relative;
                 line-height: 22px;
 
@@ -143,28 +143,6 @@
             }
         }
 
-        .services{
-            /* min-height: 100vh; */
-            padding: 20px;
- 
-            .bottom{
-                padding-top: 100px;
-    
-                .box{
-                    
-                    .service{
-                        padding: 30px 0;
-                           
-                        h4, h5{
-                            font-size: 1.7rem;
-                        }
-    
-                    }
-                }
-            }
-    
-        }
-
         .contact{
            padding: 30px;
 
@@ -200,29 +178,7 @@
                     }
                 }
             }
-        }
-
-        .funfact{
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            padding: 0;
-    
-            .title{
-                position: absolute;
-                top: 30%;
-                left: auto;
-                display: flex;
-                /* align-items: center; */
-                justify-content: center;
-                flex-direction: column;
-
-                h1{
-                    font-size: 4rem;
-                    text-align: center;
-                }
-            }
-        }
+        }    
 
     }
 
@@ -358,28 +314,6 @@
             }
         }
 
-        .services{
-            /* min-height: 100vh; */
-            padding: 20px;
- 
-            .bottom{
-                padding-top: 100px;
-    
-                .box{
-                    
-                    .service{
-                        padding: 30px 0;
-                           
-                        h4, h5{
-                            font-size: 1.7rem;
-                        }
-    
-                    }
-                }
-            }
-    
-        }
-
         .contact{
            padding: 30px;
 
@@ -417,27 +351,6 @@
             }
         }
 
-        .funfact{
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            padding: 0;
-    
-            .title{
-                position: absolute;
-                top: 30%;
-                left: auto;
-                display: flex;
-                /* align-items: center; */
-                justify-content: center;
-                flex-direction: column;
-
-                h1{
-                    font-size: 4rem;
-                    text-align: center;
-                }
-            }
-        }
     }
 }
 
@@ -503,153 +416,16 @@
         }
 
         .projects{
-            padding: 20px;
-
-            .top{
-
-                .title{
-                    h1{
-                        font-size: 1.5rem;
-                    }
-                    small{
-                        font-size: 0.5;
-                    }
-                    a{
-                        font-size: 0.8rem;
-                    }
-                }
-    
-            }
-
-            .bottom{
-                padding: 10px 0;
-                align-content: center;
-                text-align: center;
-
-                .elements{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 20px 0;
-                    gap: 30px;
-                    width: 100%;
-                    position: relative;
-                    margin-top: 10px;
-                    height: 150px;
-                    transition: var(--transition);
-                    /* background-color: aqua; */
-        
-                    .project-title{
-                        height: 60px;
-                        overflow: hidden;
-                    }
-        
-                    .project-title a{
-                        font-size: 1.8rem;
-                        text-wrap: nowrap;
-                        display: inline-block;
-                    }
-                    
-
-                    .project-title p{
-                        line-height: 20px;
-                        text-wrap: nowrap;
-                        font-size: 1rem;
-                        /* display: none; */
-                       
-                    }
-                    img{
-                        display: none;
-                    }
-        
-                    
-                }
-                .elements:hover a{
-                    transform: translateY(-150%);
-                    padding-top: 50px;
-                }
-            }
+           
         }
 
-        .services{
-            /* min-height: 100vh; */
-            padding: 20px;
- 
-            .bottom{
-                padding-top: 100px;
-    
-                .box{
-                    
-                    .service{
-                        padding: 30px 0;
-                           
-                        h4, h5{
-                            font-size: 1.7rem;
-                        }
-    
-                    }
-                }
-            }
-    
-        }
 
         .contact{
-           padding: 30px;
-
-            .bottom{
-
-                form{
-                    display: flex;
-                    flex-direction: column;
-                    padding: 20px;
-    
-                    section{
-                        grid-template-columns: 1fr;
-                        margin-bottom: 0;
-                    
-                        .form-group{
-                            display: flex;
-                            flex-direction: column;
-                            margin-bottom: 20px;
-    
-                            label{
-                                margin-bottom: 5px;
-                                font-weight: 200;
-                            }
-    
-                            input, textarea{
-                                width: 100%;
-                            }
-                        }
-                        
-                    }
-                    button{
-                        width: 100%;
-                    }
-                }
-            }
+          
         }
 
         .funfact{
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            padding: 0;
-    
-            .title{
-                position: absolute;
-                top: 30%;
-                left: auto;
-                display: flex;
-                /* align-items: center; */
-                justify-content: center;
-                flex-direction: column;
-
-                h1{
-                    font-size: 4rem;
-                    text-align: center;
-                }
-            }
+            
         }
     }
 }
