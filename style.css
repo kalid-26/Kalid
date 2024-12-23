@@ -1,0 +1,135 @@
+@font-face {
+    font-family: drukBold;
+    src: url(assets/typefont/drukBold.otf);
+}
+@font-face {
+    font-family: drukHeavy;
+    src: url(assets/typefont/drukHeavy.otf);
+}
+@font-face {
+    font-family: drukSuper;
+    src: url(assets/typefont/drukSuper.otf);
+}
+
+body{
+    font-family: drukSuper;
+}
+
+
+.cursor{
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondBG);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 2000;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    opacity: 0;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+
+    .hero{
+        padding-top: 10rem;
+
+        small,p{
+            font-family: drukBold;
+        }
+
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+            span{
+                color: transparent;
+                -webkit-text-stroke: 3px black;
+                transition: all 3000ms ease-in-out;
+            }
+        }
+    }
+
+    .navbar-nav li a{
+        font-size: 2.5rem;
+    }
+    .navbar-nav li a:hover{
+        color: #6610f2;
+    }
+
+    .social-links small a:hover{
+        color: #6610f2;
+    }
+}
+
+/* hero designer text color change animation  */
+
+.hero h1 span{
+    animation: designer 10s ease-in-out alternate-reverse infinite;
+}
+
+#about{
+    small, p{
+        font-family: 'montserrat', sans-serif;
+        font-size: .8rem;
+    }
+}
+
+.projects{
+    .title small{
+        font-family: 'montserrat', sans-serif;
+    }
+    .project-content small{
+        font-family: 'montserrat', sans-serif;
+    }
+}
+
+.services{
+    .title small{
+        font-family: 'montserrat', sans-serif;
+    }
+}
+
+
+.contact{
+
+    .title h1{
+        font-size: 4rem;
+    }
+
+    input::placeholder, textarea::placeholder{
+        font-family: 'montserrat', sans-serif;
+        font-size: .8rem;
+    }
+    input:focus, textarea:focus{
+        font-family: 'montserrat', sans-serif;
+    }
+    small{
+        font-family: 'montserrat', sans-serif;
+    }
+    
+}
+
+footer small{
+    font-family: 'montserrat', sans-serif;
+}
+/* designer color change */
+
+@keyframes designer{
+    0%{
+        -webkit-text-stroke-color: 2px rgb(253, 251, 229);
+    }
+
+    40%{
+        -webkit-text-stroke-color: rgb(216, 216, 216);
+    }
+    60%{
+        -webkit-text-stroke-color: rgb(188, 189, 189);
+    }
+    80%{
+        -webkit-text-stroke-color: rgb(157, 79, 149);
+    }
+    100%{
+        -webkit-text-stroke-color: rgb(180, 155, 155);
+    }
+}
