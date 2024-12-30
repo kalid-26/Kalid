@@ -17,9 +17,9 @@ body{
 
 
 .cursor{
-    width: 15px;
-    height: 15px;
-    background-color: var(--secondBG);
+    width: 25px;
+    height: 25px;
+    background-color: #6610f2;
     border-radius: 50%;
     position: fixed;
     z-index: 2000;
